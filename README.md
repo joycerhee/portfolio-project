@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Joyce Rhee — Portfolio
 
-## Getting Started
+**Live Site:** https://joycerhee.github.io/portfolio-project/
 
-First, run the development server:
+## About
+An aspirational professional portfolio for Joyce Rhee, a sophomore at NJIT studying Information Technology. Focused on front-end development, UX research, and digital accessibility.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Professional Direction
+Front-end developer and UX researcher building toward accessible, human-centered design. I combine user research with code to create digital experiences that work for everyone — especially the people most teams overlook.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Target Audience
+Product team leads and hiring managers at mid-size companies looking for a junior developer/researcher who understands accessibility and real user research.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Design Style — Snug Simple + Warm Editorial
+Soft cream/beige backgrounds, warm brown accents, rounded corners, generous whitespace, serif headings, and sans-serif body text. Inspired by the 2026 Snug Simple web design trend — cozy, human-centered digital spaces that feel inviting and trustworthy.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Brand Archetype — Caregiver
+Warm, approachable, and trustworthy. The portfolio reflects someone who genuinely cares about making things better for people who get overlooked in the design process. Accessibility is not a feature — it is the foundation.
 
-## Learn More
+## Selected Work
+1. **iPhone Evolution Museum** — A six-room guided exhibit exploring 19 years of iPhone history. Built with Next.js, Tailwind, and AI orchestration.
+2. **Digital Accessibility White Paper** — Academic research on why businesses fail at accessibility implementation despite legal mandates and clear ROI.
+3. **Canvas Usability Study** — Interview-based UX research with students and professors, producing personas, affinity diagrams, and design recommendations.
 
-To learn more about Next.js, take a look at the following resources:
+## AI Orchestration Process
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Tools Used
+- **GitHub Copilot** — Page scaffolding, component generation, layout implementation
+- **Claude (Anthropic)** — Content strategy, design direction, code review, debugging
+- **Lovable** — Visual design refinement, animation and interaction polish
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Process
+1. Defined portfolio concept, audience, archetype, and design direction with Claude
+2. Scaffolded Next.js project and generated initial page structure with Copilot
+3. Iterated on content — refined hero messaging, project descriptions, and about section
+4. Used Lovable for visual design polish, scroll animations, and dynamic interactions
+5. Integrated project images, personal photo, and external links
+6. Deployed to GitHub Pages
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS
+- GitHub Pages (static export)
