@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useEffect, useRef, useState, MouseEvent } from "react";
@@ -181,7 +182,7 @@ function TiltCard({
 }
 
 /* ---------- Page ---------- */
-
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 export default function Home() {
   const [activeProject, setActiveProject] = useState<string | null>(null);
   const [cursor, setCursor] = useState({ x: -200, y: -200 });
@@ -443,7 +444,7 @@ export default function Home() {
       className="relative h-20 w-20 shrink-0 rounded-full overflow-hidden border-2 border-[#d4a574]"
     >
       <img
-        src="/portfolio-photos/portfoliopicofme.jpg"
+      src={basePath + "/portfolio-photos/portfoliopicofme.jpg"}
         alt="Joyce Rhee"
         className="h-full w-full object-cover"
       />
@@ -501,7 +502,7 @@ export default function Home() {
               >
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-5 bg-[#ecdfd0]">
                   <motion.img
-                    src={project.image}
+                    src={basePath + project.image}
                     alt={project.title}
                     className="h-full w-full object-cover"
                     whileHover={{ scale: 1.08 }}
@@ -558,7 +559,7 @@ export default function Home() {
                 ✕
               </button>
               <div className="aspect-[16/10] rounded-2xl overflow-hidden mb-6 bg-[#ecdfd0]">
-                <img src={active.image} alt={active.title} className="h-full w-full object-cover" />
+                <img src={basePath + active.image} alt={active.title} className="h-full w-full object-cover" />
               </div>
               <span className="text-xs uppercase tracking-widest text-[#8b5e3c] font-semibold">
                 {active.type}
