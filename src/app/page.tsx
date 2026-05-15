@@ -441,7 +441,7 @@ export default function Home() {
     <motion.div
       whileHover={{ scale: 1.05, rotate: 2 }}
       transition={{ type: "spring", stiffness: 200, damping: 15 }}
-      className="relative h-20 w-20 shrink-0 rounded-full overflow-hidden border-2 border-[#d4a574]"
+      className="relative h-60 w-60 shrink-0 rounded-full overflow-hidden border-2 border-[#d4a574]"
     >
       <img
       src={basePath + "/portfolio-photos/portfoliopicofme.jpg"}
