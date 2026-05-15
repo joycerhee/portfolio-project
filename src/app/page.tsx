@@ -279,7 +279,6 @@ export default function Home() {
         ref={heroRef}
         className="relative overflow-hidden px-6 pt-20 pb-32 lg:px-8 lg:pt-28 lg:pb-40"
       >
-        {/* Decorative animated blobs */}
         <motion.div
           style={{ y: blob1Y }}
           animate={{ scale: [1, 1.15, 1], rotate: [0, 20, 0] }}
@@ -295,121 +294,85 @@ export default function Home() {
 
         <motion.div
           style={{ y: heroY, opacity: heroOpacity }}
-          className="relative mx-auto max-w-6xl"
+          className="relative mx-auto max-w-6xl grid lg:grid-cols-[1.3fr_0.7fr] gap-16 items-center"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-[#8b5e3c]/30 bg-[#faf5ec]/70 px-4 py-1.5 text-xs font-medium text-[#5a4838]"
-          >
-            <motion.span
-              animate={{ scale: [1, 1.4, 1], opacity: [1, 0.6, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="h-1.5 w-1.5 rounded-full bg-[#8b5e3c]"
-            />
-            UX Research · Front-End · Accessibility
-          </motion.div>
-
-          <motion.h1
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } },
-            }}
-            className="mt-8 font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight max-w-4xl"
-          >
-            {[
-              "The best digital products start with the people ",
-            ].map((chunk, i) => (
-              <motion.span
-                key={i}
-                variants={{
-                  hidden: { opacity: 0, y: 24 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-                }}
-              >
-                {chunk}
-              </motion.span>
-            ))}
-            <motion.span
-              variants={{
-                hidden: { opacity: 0, y: 24 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-              }}
-              className="relative inline-block italic text-[#8b5e3c]"
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 rounded-full border border-[#8b5e3c]/30 bg-[#faf5ec]/70 px-4 py-1.5 text-xs font-medium text-[#5a4838]"
             >
-              everyone else overlooks
               <motion.span
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 1, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                style={{ transformOrigin: "0% 50%" }}
-                className="absolute left-0 -bottom-2 h-[3px] w-full bg-[#d4a574]"
+                animate={{ scale: [1, 1.4, 1], opacity: [1, 0.6, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="h-1.5 w-1.5 rounded-full bg-[#8b5e3c]"
               />
-            </motion.span>
-            <motion.span
-              variants={{
-                hidden: { opacity: 0 },
-                visible: { opacity: 1, transition: { duration: 0.6 } },
-              }}
-            >
-              .
-            </motion.span>
-          </motion.h1>
+              UX Research · Front-End · Accessibility
+            </motion.div>
 
-          <Reveal delay={0.4} className="mt-10 grid gap-6 max-w-2xl">
-            <p className="text-lg text-[#5a4838] leading-relaxed">
-              I study how real people use digital products, then I build interfaces that
-              actually work for all of them. Sophomore at NJIT studying Information
-              Technology, focused on accessibility and human-centered design.
-            </p>
-            <p className="text-base text-[#5a4838] leading-relaxed">
-              <span className="font-semibold text-[#2d2117]">Built for </span>
-              Product teams that treat accessibility as a design decision, not a
-              compliance checkbox.
-            </p>
-          </Reveal>
+            <h1 className="mt-8 font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.05] tracking-tight">
+              The best digital products start with the people{" "}
+              <span className="relative inline-block italic text-[#8b5e3c]">
+                everyone else overlooks.
+              </span>
+            </h1>
 
-          <Reveal delay={0.55} className="mt-10 flex flex-wrap gap-4">
-            <MagneticButton
-              onClick={() => scrollToSection("work")}
-              className="group rounded-full bg-[#8b5e3c] px-7 py-3.5 text-sm font-semibold text-[#faf5ec] hover:bg-[#6f472d] transition-all hover:shadow-lg hover:shadow-[#8b5e3c]/30 inline-flex items-center gap-2"
-            >
-              See my work
-              <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
-            </MagneticButton>
-            <MagneticButton
-              onClick={() => scrollToSection("contact")}
-              className="rounded-full border border-[#8b5e3c]/40 bg-[#faf5ec] px-7 py-3.5 text-sm font-semibold text-[#2d2117] hover:bg-[#ecdfd0] transition-colors"
-            >
-              Let's talk
-            </MagneticButton>
-          </Reveal>
+            <Reveal delay={0.4} className="mt-10 grid gap-6 max-w-2xl">
+              <p className="text-lg text-[#5a4838] leading-relaxed">
+                I study how real people use digital products, then I build interfaces that
+                actually work for all of them. Sophomore at NJIT studying Information
+                Technology, focused on accessibility and human-centered design.
+              </p>
+              <p className="text-base text-[#5a4838] leading-relaxed">
+                <span className="font-semibold text-[#2d2117]">Built for </span>
+                Product teams that treat accessibility as a design decision, not a
+                compliance checkbox.
+              </p>
+            </Reveal>
 
-          {/* Scroll hint */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.4 }}
-            className="mt-16 flex items-center gap-3 text-xs text-[#8b5e3c]"
-          >
-            <motion.span
-              animate={{ y: [0, 6, 0] }}
-              transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-              className="inline-block"
+            <Reveal delay={0.55} className="mt-10 flex flex-wrap gap-4">
+              <MagneticButton
+                onClick={() => scrollToSection("work")}
+                className="group rounded-full bg-[#8b5e3c] px-7 py-3.5 text-sm font-semibold text-[#faf5ec] hover:bg-[#6f472d] transition-all hover:shadow-lg hover:shadow-[#8b5e3c]/30 inline-flex items-center gap-2"
+              >
+                See my work
+                <span className="inline-block transition-transform group-hover:translate-x-1">→</span>
+              </MagneticButton>
+              <MagneticButton
+                onClick={() => scrollToSection("contact")}
+                className="rounded-full border border-[#8b5e3c]/40 bg-[#faf5ec] px-7 py-3.5 text-sm font-semibold text-[#2d2117] hover:bg-[#ecdfd0] transition-colors"
+              >
+                Let&apos;s talk
+              </MagneticButton>
+            </Reveal>
+          </div>
+
+          <div className="hidden lg:flex justify-center">
+            <motion.div
+              whileHover={{ y: -6 }}
+              transition={{ type: "spring", stiffness: 200, damping: 18 }}
+              className="rounded-[2rem] bg-[#faf5ec] border border-[#e3d3bf] p-8 space-y-6 text-center"
             >
-              ↓
-            </motion.span>
-            scroll
-          </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="relative h-72 w-72 mx-auto rounded-full overflow-hidden border-2 border-[#d4a574]"
+              >
+                <img src={basePath + "/portfolio-photos/portfoliopicofme.jpg"} alt="Joyce Rhee" className="h-full w-full object-cover" />
+              </motion.div>
+              <div>
+                <p className="text-xs uppercase tracking-widest text-[#8b5e3c]">Currently</p>
+                <p className="mt-1 font-serif text-xl">Sophomore @ NJIT</p>
+              </div>
+              <span className="inline-flex items-center gap-2 rounded-full bg-[#ecdfd0] px-4 py-2 text-xs font-medium text-[#2d2117]">✦ Open to internships</span>
+            </motion.div>
+          </div>
         </motion.div>
       </section>
 
       {/* About */}
       <section id="about me" className="relative px-6 py-24 lg:px-8 lg:py-32">
-        <div className="mx-auto max-w-6xl grid lg:grid-cols-[1.4fr_1fr] gap-16">
+        <div className="mx-auto max-w-4xl">
           <Reveal>
             <span className="text-xs uppercase tracking-[0.2em] text-[#8b5e3c] font-semibold">
               Who I am
@@ -431,43 +394,7 @@ export default function Home() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.15}>
-            <motion.div
-  whileHover={{ y: -6 }}
-  transition={{ type: "spring", stiffness: 200, damping: 18 }}
-  className="rounded-[2rem] bg-[#faf5ec] border border-[#e3d3bf] p-8 space-y-6"
->
-  <div className="flex items-center gap-4">
-    <motion.div
-      whileHover={{ scale: 1.05, rotate: 2 }}
-      transition={{ type: "spring", stiffness: 200, damping: 15 }}
-      className="relative h-60 w-60 shrink-0 rounded-full overflow-hidden border-2 border-[#d4a574]"
-    >
-      <img
-      src={basePath + "/portfolio-photos/portfoliopicofme.jpg"}
-        alt="Joyce Rhee"
-        className="h-full w-full object-cover"
-      />
-    </motion.div>
-    <div className="flex -space-x-2">
-      <span className="h-8 w-8 rounded-full bg-[#d4a574]" />
-      <span className="h-8 w-8 rounded-full bg-[#a8b89a]" />
-    </div>
-  </div>
-  <div>
-    <p className="text-xs uppercase tracking-widest text-[#8b5e3c]">Currently</p>
-    <p className="mt-1 font-serif text-xl">Sophomore @ NJIT</p>
-  </div>
-  <motion.div
-    animate={{ rotate: [0, 2, -2, 0] }}
-    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-    className="inline-flex items-center gap-2 rounded-full bg-[#ecdfd0] px-4 py-2 text-xs font-medium text-[#2d2117]"
-  >
-    ✦ Open to internships
-  </motion.div>
-</motion.div>
-
-          </Reveal>
+          
         </div>
       </section>
 
